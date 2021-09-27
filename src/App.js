@@ -12,20 +12,35 @@ var emojiDictonary = {
   "🦀": "Crab"
 };
 
-var username = "Tushar";
-var userloggedIn = true;
-
-function usernameOne() {
-  if (userloggedIn) {
-    return username;
+var list = ["milk", "butter", "icecream", "juice", "banana", "apple", "toast"];
+function getColor(index) {
+  if (index % 2 === 0) {
+    return "red";
   }
-  return "no Name";
+  return "white";
+}
+
+function handler(item) {
+  console.log("clicked", item);
 }
 
 export default function App() {
   return (
     <div className="App">
-      <h2>welcome {usernameOne()} </h2>
+      <h2>welcome </h2>
+      {list.map((item, index) => {
+        return (
+          <li
+            key={item}
+            onClick={() => {
+              handler(item);
+            }}
+            style={{ backgroundColor: getColor(index) }}
+          >
+            {item}
+          </li>
+        );
+      })}
     </div>
   );
 }
