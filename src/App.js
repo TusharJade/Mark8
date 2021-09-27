@@ -35,7 +35,7 @@ export default function App() {
           fontSize: "1.7rem",
           backgroundColor: "#F3F4F6",
           padding: "2rem",
-          borderRadius: "1rem",
+          borrderRadius: "1rem",
           marginBottom: "5rem"
         }}
       >
