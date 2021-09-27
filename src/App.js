@@ -12,15 +12,20 @@ var emojiDictonary = {
   "🦀": "Crab"
 };
 
-var list = ["milk", "butter", "icecream", "juice", "banana", "apple", "toast"];
+var username = "Tushar";
+var userloggedIn = true;
+
+function usernameOne() {
+  if (userloggedIn) {
+    return username;
+  }
+  return "no Name";
+}
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Inside outtt !</h1>
-      {list.map((item) => {
-        return <li>{item}</li>;
-      })}
+      <h2>welcome {usernameOne()} </h2>
     </div>
   );
 }
