@@ -6,4 +6,10 @@
 .t {
   padding: 2rem;
   width: 85%;
+  border: 2px solid;
+}
+
+body {
+  background-color: #d1d5db;
+  margin: 0;
 }

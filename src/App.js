@@ -11,34 +11,52 @@ var emojiDictonary = {
   "💧": "Droplet",
   "🦀": "Crab"
 };
-
-var list = ["milk", "butter", "icecream", "juice", "banana", "apple", "toast"];
-function getColor(index) {
-  if (index % 2 === 0) {
-    return "red";
-  }
-  return "white";
-}
-
-function handler(item) {
-  console.log("clicked", item);
-}
+var emojiweknow = Object.keys(emojiDictonary);
 
 export default function App() {
+  var [no, now] = useState("");
+  function clik(e) {
+    if (emojiDictonary[e.target.value] === undefined) {
+      emojiDictonary[e.target.value] = "We dont have this in our database";
+    }
+    now(emojiDictonary[e.target.value]);
+  }
+  function emojiclick(emoji) {
+    var meaning = emojiDictonary[emoji];
+    now(meaning);
+  }
+
   return (
     <div className="App">
-      <h2>welcome </h2>
-      {list.map((item, index) => {
+      <header
+        style={{
+          textAlign: "center",
+          fontWeight: "bold",
+          fontSize: "1.7rem",
+          backgroundColor: "#F3F4F6",
+          padding: "2rem",
+          borderRadius: "1rem",
+          marginBottom: "5rem"
+        }}
+      >
+        Animals and Nature
+      </header>
+
+      <h1>Inside outtt !</h1>
+      <input className="t" onChange={clik}></input>
+      <h2>{no}</h2>
+      <h3>Emoji we know </h3>
+      {emojiweknow.map((emoji) => {
         return (
-          <li
-            key={item}
+          <strong
             onClick={() => {
-              handler(item);
+              emojiclick(emoji);
             }}
-            style={{ backgroundColor: getColor(index) }}
+            key={emoji}
+            style={{ fontSize: "1.3rem", cursor: "pointer", padding: "1rem" }}
           >
-            {item}
-          </li>
+            {emoji}
+          </strong>
         );
       })}
     </div>
