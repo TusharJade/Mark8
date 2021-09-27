@@ -16,8 +16,8 @@ export default function App() {
   var [no, now] = useState("");
 
   function clik(e) {
-    if (e.target.input === undefined) {
-      emojiDictonary[e.target.value] = "We dont have this in our databae";
+    if (emojiDictonary[e.target.value] === undefined) {
+      emojiDictonary[e.target.value] = "We dont have this in our database";
     }
     now(emojiDictonary[e.target.value]);
   }
