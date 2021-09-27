@@ -12,21 +12,15 @@ var emojiDictonary = {
   "🦀": "Crab"
 };
 
-export default function App() {
-  var [no, now] = useState("");
+var list = ["milk", "butter", "icecream", "juice", "banana", "apple", "toast"];
 
-  function clik(e) {
-    if (emojiDictonary[e.target.value] === undefined) {
-      emojiDictonary[e.target.value] = "We dont have this in our database";
-    }
-    now(emojiDictonary[e.target.value]);
-  }
-  console.log(no);
+export default function App() {
   return (
     <div className="App">
       <h1>Inside outtt !</h1>
-      <input className="t" onChange={clik}></input>
-      <div>{no}</div>
+      {list.map((item) => {
+        return <li>{item}</li>;
+      })}
     </div>
   );
 }
