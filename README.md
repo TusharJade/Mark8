@@ -3,4 +3,4 @@ Created with CodeSandbox
 
 This is emoji enterpreter app I made on codesandbox this is just for fun try it.
 
-Here is link of the app -https://mark8-emoji-enterpretor.netlify.app/
+Here is link of the app - https://csb-q3sl0.netlify.app/
