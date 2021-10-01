@@ -9,7 +9,10 @@ var emojiDictonary = {
   "🔥": "fire",
   "🌈": "Rainbow",
   "💧": "Droplet",
-  "🦀": "Crab"
+  "🦀": "Crab",
+  "🐔": "Chicken",
+  "🦆": "Duck",
+  "🦉": "owl"
 };
 var emojiweknow = Object.keys(emojiDictonary);
 
@@ -35,7 +38,7 @@ export default function App() {
           fontSize: "1.7rem",
           backgroundColor: "#F3F4F6",
           padding: "2rem",
-          borrderRadius: "1rem",
+          borderRadius: "1rem",
           marginBottom: "5rem"
         }}
       >
